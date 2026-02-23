@@ -7,3 +7,10 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
+      - key: FLASK_ENV
+        value: production
+    healthCheckPath: / 
+    disk:
+      name: image-uploads
+      mountPath: /uploads
+      sizeGB: 1
